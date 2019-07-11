@@ -1,0 +1,27 @@
+version: '3.3'
+
+networks:
+  general:
+    driver: bridge
+
+services:
+  cassandra_node_1:
+    container_name: cassandra_node_1
+    build:
+      context: ./cassandra
+    hostname: cassandra_node_1
+    networks:
+      - general
+    environment:
+      CASSANDRA_CLUSTER_NAME: "Cassandra Cluster"
+
+  cassandra_node_2:
+    container_name: cassandra_node_2
+    build:
+      context: ./cassandra
+    hostname: cassandra_node_2
+    networks:
+      - general
+    environment:
+      CASSANDRA_SEEDS: "cassandra_node_1"
+      CASSANDRA_CLUSTER_NAME: "Cassandra Cluster"
