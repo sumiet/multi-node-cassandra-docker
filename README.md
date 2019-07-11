@@ -1,5 +1,5 @@
 # multi-node-cassandra-docker
-Multi-node Cassandra setup using docker with minimal configuration
+Multi-node Cassandra cluster setup using docker with minimal configuration
 
 This setup helps spawning up a 2 node cassandra cluster with default configuration and minimum configuration changes.
 
